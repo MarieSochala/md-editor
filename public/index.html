@@ -4,10 +4,25 @@
 	<meta charset="UTF-8">
 	<title>My Markdown Editor</title>
 	<link rel="stylesheet" href="/css/style.css">
+	<script src="lib/codemirror-compressed.js"></script>
 </head>
 <body>
-	<h1>Md Editor</h1>
-	<div id="hello à tous"></div>
+	<h1>Bienvenue sur My Markdown Editor</h1>
+	<section>
+		<div id="Md" class="column">
+			<h2>Markdown</h2>
+			<form class="ui form segment" action="/" method="post">
+				<input type="text" name="name" placeholder="Entrez votre texte.." size="50"/>
+				<button type="submit" class="ui grey button">Envoyer</button>
+			</form>
+		</div>
+
+		<div id="Html" class="column">
+			<h2>HTML</h2>
+				<div id="boxcontact">	
+				</div>
+		</div>
+	</section>
 	<script src="/js/bundle.js"></script>
 </body>
 </html>
