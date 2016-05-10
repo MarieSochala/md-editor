@@ -10977,6 +10977,10 @@ var ReactEmptyComponentInjection = {
   }
 };
 
+function registerNullComponentID() {
+  ReactEmptyComponentRegistry.registerNullComponentID(this._rootNodeID);
+}
+
 var ReactEmptyComponent = function (instantiate) {
   this._currentElement = null;
   this._rootNodeID = null;
@@ -10985,7 +10989,7 @@ var ReactEmptyComponent = function (instantiate) {
 assign(ReactEmptyComponent.prototype, {
   construct: function (element) {},
   mountComponent: function (rootID, transaction, context) {
-    ReactEmptyComponentRegistry.registerNullComponentID(rootID);
+    transaction.getReactMountReady().enqueue(registerNullComponentID, this);
     this._rootNodeID = rootID;
     return ReactReconciler.mountComponent(this._renderedComponent, rootID, transaction, context);
   },
@@ -15291,7 +15295,7 @@ module.exports = ReactUpdates;
 
 'use strict';
 
-module.exports = '0.14.7';
+module.exports = '0.14.8';
 },{}],114:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -19035,6 +19039,12 @@ module.exports = require('./lib/React');
 
 var React = require('react');
 var ReactDOM = require('react-dom');
+
+myCodeMirrorEditor = CodeMirror(document.body, {
+  lineNumbers: true,
+  lineWrapping: true,
+  mode: "markdown"
+});
 
 ReactDOM.render(React.createElement('h1', null, 'Hello, world!'), document.getElementById('hello'));
 
