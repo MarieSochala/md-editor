@@ -19039,8 +19039,7 @@ module.exports = require('./lib/React');
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-
-myCodeMirrorEditor = CodeMirror(document.body, {
+var myCodeMirrorEditor = CodeMirror(document.body, {
   lineNumbers: true,
   lineWrapping: true,
   mode: "markdown"
