@@ -1,0 +1,27 @@
+body {
+  background-color: teal;
+  color: white; }
+
+h1 {
+  text-align: center; }
+
+#container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+#editor {
+  height: 300px;
+  width: 600px; }
+
+#reponseHtml {
+  margin-left: 10px;
+  height: 300px;
+  width: 600px;
+  background-color: white;
+  color: black; }
+
+/*# sourceMappingURL=style.css.map */
