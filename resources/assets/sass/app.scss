@@ -1,19 +1,22 @@
 body {
 	background-color:teal;
 	color:white;
+	text-align:center;
 }
+
 #container{
 	display: flex;
+	justify-content:center;
 }
+
 #editor{
 height: 300px;
 width:600px;
-display: inline-flex;
 }
+
 #hello{
+margin-left:10px;
 height: 300px;
 width:600px;
-background-color:red;
-display: inline-flex;
-	
+background-color:white;	
 }

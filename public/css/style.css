@@ -1,25 +1,24 @@
 body {
   background-color: teal;
-  color: white; }
+  color: white;
+  text-align: center; }
 
 #container {
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 #editor {
   height: 300px;
-  width: 600px;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex; }
+  width: 600px; }
 
 #hello {
+  margin-left: 10px;
   height: 300px;
   width: 600px;
-  background-color: red;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex; }
+  background-color: white; }
 
 /*# sourceMappingURL=style.css.map */
