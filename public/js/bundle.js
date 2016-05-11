@@ -41778,24 +41778,28 @@ var Mrkdwn = React.createClass({
 		};
 	},
 
+	//modif
 	updateCode: function updateCode(newCode) {
+		//modification de l'état
 		this.setState({
 			code: newCode
 		});
+		// modif du markdown en html dans la div hello
 		var textupdate = marked(newCode);
-		$('#hello').html(textupdate);
+		$('#reponseHtml').html(textupdate);
 	},
 
 	render: function render() {
+		//options codemirror en markdown
 		var myCodeMirrorEditor = {
 			lineNumbers: true,
 			highlightFormatting: true,
 			matchBrackets: true,
 			mode: "markdown"
 		};
+		//value > String the markdown /fonction onChange appelée quand un changement est fait /options passées à CodeMirror
 		return React.createElement(Codemirror, { value: this.state.code, onChange: this.updateCode, options: myCodeMirrorEditor });
 	}
-
 });
 
 ReactDOM.render(React.createElement(Mrkdwn, null), document.getElementById('editor'));
