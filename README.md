@@ -10,7 +10,7 @@ N'hésitez pas également à améliorer ce document via un pull request et à po
 * [X] Créer un éditeur de markdown avec [CodeMirror 2](http://codemirror.net/2/mode/gfm/index.html) avec preview
 * [X] Ajouter une fonctionnalité de prévisualisation
 * [X] Sauvegarder les fichiers dans localStorage ([comprendre localStorage - developpez.net](http://debray-jerome.developpez.com/articles/comprendre-le-storage-en-html5/), [doc MDN](https://developer.mozilla.org/fr/docs/Web/API/Window/localStorage))
-* [ ] Déployer sur une github Page
+* [ ] Déployer sur une github Page > [Lien vers ma page](http://mariesochala.github.io/md-editor/) attention, je rencontre des problèmes.
 
 ### 2ème étape (2j max)
 * [ ] Utiliser les [sessions en PHP](http://php.developpez.com/cours/sessions/?page=page_3) pour persister les donnéess côté serveur (en désactivant localStorage)
@@ -32,7 +32,7 @@ N'hésitez pas également à améliorer ce document via un pull request et à po
 * [ ] code review commentée (facilitez nous la vie, faites de commit clairs en ajoutant les fichiers uniquement lié à la fonctionnalité que vous implémentez)
 * [ ]  organisation du trello
 
- Etapes d'installation : 
+ ## Etapes d'installation : 
  * npm install
  * gulp watch
 
