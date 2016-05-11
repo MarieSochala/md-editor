@@ -2,3 +2,18 @@ body {
 	background-color:teal;
 	color:white;
 }
+#container{
+	display: flex;
+}
+#editor{
+height: 300px;
+width:600px;
+display: inline-flex;
+}
+#hello{
+height: 300px;
+width:600px;
+background-color:red;
+display: inline-flex;
+	
+}

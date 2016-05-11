@@ -1,4 +1,25 @@
 body {
-  background-color: teal; }
+  background-color: teal;
+  color: white; }
+
+#container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+#editor {
+  height: 300px;
+  width: 600px;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+
+#hello {
+  height: 300px;
+  width: 600px;
+  background-color: red;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
 
 /*# sourceMappingURL=style.css.map */
