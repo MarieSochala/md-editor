@@ -1,17 +1,46 @@
-
+'use strict'
+var $ = require('jquery');
+var marked = require('marked');
 var React = require('react');
 var ReactDOM = require('react-dom');
-var marked = require('marked');
+var Codemirror = require('react-codemirror');
+require('codemirror/mode/javascript/javascript');
+require('codemirror/mode/xml/xml');
+require('codemirror/mode/markdown/markdown');
 
-var myCodeMirrorEditor = CodeMirror(document.body, {
-  lineNumbers: true,
-  lineWrapping: true,
-  highlightFormatting: true,
-  mode:  "markdown"
+
+var Mrkdwn = React.createClass({
+
+	//initialisation 
+	getInitialState: function() {
+		return {
+			code: ""
+		};
+	},
+
+	updateCode: function(newCode) {
+		this.setState({
+			code: newCode
+		});
+	var textupdate = marked(newCode);
+	$('#hello').html(textupdate);
+	
+	},
+
+	render: function() {
+		var myCodeMirrorEditor = {
+		lineNumbers: true,
+		highlightFormatting: true,
+		matchBrackets: true,
+		mode:  "markdown"
+	};
+		return <Codemirror value={this.state.code} onChange={this.updateCode} options={myCodeMirrorEditor} />
+	}
+	
 });
 
-
 ReactDOM.render(
-  <h1>Hello, world!</h1>,
-  document.getElementById('hello')
+  <Mrkdwn />,
+  document.getElementById('editor')
 );
+	
