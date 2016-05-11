@@ -8,8 +8,8 @@ N'hésitez pas également à améliorer ce document via un pull request et à po
 
 ### 1ère étape (3j max)
 * [X] Créer un éditeur de markdown avec [CodeMirror 2](http://codemirror.net/2/mode/gfm/index.html) avec preview
-* [ ] Ajouter une fonctionnalité de prévisualisation
-* [ ] Sauvegarder les fichiers dans localStorage ([comprendre localStorage - developpez.net](http://debray-jerome.developpez.com/articles/comprendre-le-storage-en-html5/), [doc MDN](https://developer.mozilla.org/fr/docs/Web/API/Window/localStorage))
+* [X] Ajouter une fonctionnalité de prévisualisation
+* [X] Sauvegarder les fichiers dans localStorage ([comprendre localStorage - developpez.net](http://debray-jerome.developpez.com/articles/comprendre-le-storage-en-html5/), [doc MDN](https://developer.mozilla.org/fr/docs/Web/API/Window/localStorage))
 * [ ] Déployer sur une github Page
 
 ### 2ème étape (2j max)
@@ -24,7 +24,7 @@ N'hésitez pas également à améliorer ce document via un pull request et à po
 * [ ] Déploiement sur un VPS (smp, perso, heroku...)
 
 ## Préparation & modalités
-* [ ]  Validation du trello et du choix des technos/librairies avant de commencer à coder
+* [X]  Validation du trello et du choix des technos/librairies avant de commencer à coder
 * [X]  Pomodoro et trello obligatoire > https://kanbanflow.com/board/600e4fe7494e4e6af71026efe970d87a
 * [X]  Code sur github (fork de ce repo)
 
