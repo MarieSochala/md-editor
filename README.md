@@ -1,13 +1,13 @@
 # md-editor
 
-Un éditeur de markdown reposant sur codemirror et permettant une preview (live et/ou action de l'utiisateur, à vous de voir), avec deux panneaux juxtaposés, qui puisse fonctionner en ligne ou en local. Le choix des librairies est à votre libre appréciation.
+Un éditeur de markdown reposant sur codemirror et permettant une preview (live et/ou action de l'utilisateur), avec deux panneaux juxtaposés, qui puissent fonctionner en ligne ou en local.
 
 N'hésitez pas également à améliorer ce document via un pull request et à poser des questions via les [issues](https://github.com/SimplonTlse/md-editor/issues)
 
 ## Objectifs :
 
 ### 1ère étape (3j max)
-* [ ] Créer un éditeur de markdown avec [CodeMirror 2](http://codemirror.net/2/mode/gfm/index.html) avec preview
+* [X] Créer un éditeur de markdown avec [CodeMirror 2](http://codemirror.net/2/mode/gfm/index.html) avec preview
 * [ ] Ajouter une fonctionnalité de prévisualisation
 * [ ] Sauvegarder les fichiers dans localStorage ([comprendre localStorage - developpez.net](http://debray-jerome.developpez.com/articles/comprendre-le-storage-en-html5/), [doc MDN](https://developer.mozilla.org/fr/docs/Web/API/Window/localStorage))
 * [ ] Déployer sur une github Page
@@ -32,4 +32,7 @@ N'hésitez pas également à améliorer ce document via un pull request et à po
 * [ ] code review commentée (facilitez nous la vie, faites de commit clairs en ajoutant les fichiers uniquement lié à la fonctionnalité que vous implémentez)
 * [ ]  organisation du trello
 
- 
+ Etapes d'installation : 
+ * npm install
+ * gulp watch
+
