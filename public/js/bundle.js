@@ -41773,8 +41773,12 @@ var Mrkdwn = React.createClass({
 
 	//initialisation
 	getInitialState: function getInitialState() {
+		//localStorage stocke les données transformées en markdown récupérées plus bas
+		var stockedText = localStorage.getItem("newText");
+		var stockTextMrkdwn = marked(stockedText);
+		$('#reponseHtml').html(stockTextMrkdwn);
 		return {
-			code: ""
+			code: stockedText
 		};
 	},
 
@@ -41787,6 +41791,8 @@ var Mrkdwn = React.createClass({
 		// modif du markdown en html dans la div hello
 		var textupdate = marked(newCode);
 		$('#reponseHtml').html(textupdate);
+		// localStorage mis en place pour récupérer les donnees tapees
+		localStorage.setItem("newText", newCode);
 	},
 
 	render: function render() {
