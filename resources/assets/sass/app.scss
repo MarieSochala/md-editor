@@ -1,8 +1,11 @@
 body {
 	background-color:teal;
 	color:white;
+}
+h1{
 	text-align:center;
 }
+	
 
 #container{
 	display: flex;
@@ -19,4 +22,5 @@ margin-left:10px;
 height: 300px;
 width:600px;
 background-color:white;	
+color:black;
 }
