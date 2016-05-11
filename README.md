@@ -32,7 +32,7 @@ N'hésitez pas également à améliorer ce document via un pull request et à po
 * [ ] code review commentée (facilitez nous la vie, faites de commit clairs en ajoutant les fichiers uniquement lié à la fonctionnalité que vous implémentez)
 * [ ]  organisation du trello
 
- ## Etapes d'installation : 
+## Etapes d'installation : 
  * npm install
  * gulp watch
 
