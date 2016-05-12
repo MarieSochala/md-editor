@@ -4,19 +4,18 @@
 	<meta charset="UTF-8">
 	<title>My Markdown Editor</title>
 	<link rel="stylesheet" href="lib/codemirror.css">
+	<link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="/css/style.css">
 	
 </head>
 <body>
 	<h1>My Markdown Editor</h1>
-	<div id="container">
-	<div id="editor"></div>
-	<div id="reponseHtml"></div>
+	<div class="container">
+		<div id="editor"></div>
+		<div id="reponseHtml"></div>
 	</div>
-	
-	
-	
-
+	<form action="index.php" method="POST" name="theEditor"> Titre : <input type="text" name="titre"><br/> <input type="button" value="download" name="telecharger"><br/><input type="button" value="Sauvegarder" name="dwnld">
+	</form>
 
 	<script src="/js/jquery.js"></script>
 	<script src="/lib/codemirror.js"></script>
