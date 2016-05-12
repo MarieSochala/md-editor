@@ -8,10 +8,10 @@ require('codemirror/mode/javascript/javascript');
 require('codemirror/mode/xml/xml');
 require('codemirror/mode/markdown/markdown');
 
-
+//creation de Mrkdwn avec React
 var Mrkdwn = React.createClass({
 
-	//initialisation 
+	//initialisation de la page avec localStorage
 	getInitialState: function() {
 		//localStorage stocke les données transformées en markdown récupérées plus bas
 		var stockedText = localStorage.getItem("newText");
@@ -22,7 +22,7 @@ var Mrkdwn = React.createClass({
 		};
 	},
 
-	//modif
+	//permission de faire du marked
 	updateCode: function(newCode) {
 		//modification de l'état
 		this.setState({
