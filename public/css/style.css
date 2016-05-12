@@ -1,27 +1,29 @@
 body {
   background-color: teal;
-  color: white; }
+  color: white;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif; }
 
 h1 {
   text-align: center; }
 
-#container {
+.container {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
-
-#editor {
-  height: 300px;
-  width: 600px; }
-
-#reponseHtml {
-  margin-left: 10px;
-  height: 300px;
-  width: 600px;
-  background-color: white;
-  color: blue; }
+  .container #editor {
+    height: 300px;
+    width: 600px; }
+  .container #reponseHtml {
+    margin-left: 10px;
+    height: 300px;
+    width: 600px;
+    background-color: white;
+    color: blue;
+    border-left: solid 1px #e6e6e6;
+    padding: 0 15px; }
 
 /*# sourceMappingURL=style.css.map */
