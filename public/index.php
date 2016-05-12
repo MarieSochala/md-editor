@@ -1,13 +1,20 @@
 <?php
 session_start ();
-//test si les variables sont définies
-if (isset($_POST['titre']) && isset($_POST['telecharger']) && isset($_POST['dwnld'])) {
+
+if (isset($_POST["titre"])) {
 	// Enregistrement paramètres comme variables de session 
-	$_SESSION['titre'] = $_POST['titre'];
-	$_SESSION['telecharger'] = $_POST['telecharger'];
-	
-	$_SESSION['dwnld'] = $_POST['dwnld'];
+	$titre = $_POST["titre"];
+	$theEditor = $_POST["theEditor"];
+	$_SESSION["titre"]= $theEditor;
+}
+
+if (isset($_POST["titreRegistered"])) {
+	$titre = $_POST["titreRegistered"];
+	if (isset($_SESSION["$titre"])) {
+		$data = $_SESSION["titre"];
+	}
+}
 
 else {
-	echo 'youhou';
+	echo 'youhou je ne connais pas ce titre';
 }
