@@ -10,16 +10,20 @@ require('codemirror/mode/markdown/markdown');
 
 //creation de Mrkdwn avec React
 var Mrkdwn = React.createClass({
-
 	//initialisation de la page avec localStorage
 	getInitialState: function() {
 		//localStorage stocke les données transformées en markdown récupérées plus bas
 		var stockedText = localStorage.getItem("newText");
+		if(typeof stockedText == "undefined" || stockedText == null){
+			stockedText = " ";
+		}
+		else {
 		var stockTextMrkdwn = marked(stockedText);
-		$('#reponseHtml').html(stockTextMrkdwn);
+		$("#reponseHtml").html(stockTextMrkdwn);
 		return {
 			code: stockedText
 		};
+	}
 	},
 
 	//permission de faire du marked
@@ -33,6 +37,7 @@ var Mrkdwn = React.createClass({
 	$('#reponseHtml').html(textupdate);
 	// localStorage mis en place pour récupérer les donnees tapees
 	localStorage.setItem("newText", newCode);
+
 	},
 
 	render: function() {

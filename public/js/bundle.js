@@ -41776,11 +41776,15 @@ var Mrkdwn = React.createClass({
 	getInitialState: function getInitialState() {
 		//localStorage stocke les données transformées en markdown récupérées plus bas
 		var stockedText = localStorage.getItem("newText");
-		var stockTextMrkdwn = marked(stockedText);
-		$('#reponseHtml').html(stockTextMrkdwn);
-		return {
-			code: stockedText
-		};
+		if (typeof stockedText == "undefined" || stockedText == null) {
+			stockedText = " ";
+		} else {
+			var stockTextMrkdwn = marked(stockedText);
+			$("#reponseHtml").html(stockTextMrkdwn);
+			return {
+				code: stockedText
+			};
+		}
 	},
 
 	//permission de faire du marked
