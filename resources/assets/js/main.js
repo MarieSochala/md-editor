@@ -10,18 +10,18 @@ require('codemirror/mode/markdown/markdown');
 
 
 var Mrkdwn = React.createClass({
-
-	//initialisation 
+	componentDidMount: function(){
+		this.setState({
+			code:localStorage.getItem("newText")
+		});
+	},
 	getInitialState: function() {
-		//localStorage stocke les données transformées en markdown récupérées plus bas
-		var stockedText = localStorage.getItem("newText");
-		var stockTextMrkdwn = marked(stockedText);
-		$('#reponseHtml').html(stockTextMrkdwn);
+
 		return {
-			code: stockedText
+			code: " "
 		};
 	},
-
+	
 	//modif
 	updateCode: function(newCode) {
 		//modification de l'état
