@@ -9,7 +9,7 @@ h1{
 	text-align:center;
 }
 	
-.container{
+#container{
 	display: flex;
 	justify-content:center;
 	#editor{
@@ -20,7 +20,7 @@ h1{
 		margin-left:10px;
 		height: 300px;
 		width:600px;
-		background-color:white;	
+		background-color:grey;	
 		color:blue;
 		border-left: solid 1px #e6e6e6;
 		padding:0 15px;
