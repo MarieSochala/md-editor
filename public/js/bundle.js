@@ -41771,14 +41771,14 @@ require('codemirror/mode/markdown/markdown');
 var Mrkdwn = React.createClass({
 	displayName: 'Mrkdwn',
 
-	//initialisation
+	componentDidMount: function componentDidMount() {
+		this.setState({
+			code: localStorage.getItem("newText")
+		});
+	},
 	getInitialState: function getInitialState() {
-		//localStorage stocke les données transformées en markdown récupérées plus bas
-		var stockedText = localStorage.getItem("newText");
-		var stockTextMrkdwn = marked(stockedText);
-		$('#reponseHtml').html(stockTextMrkdwn);
 		return {
-			code: stockedText
+			code: ""
 		};
 	},
 

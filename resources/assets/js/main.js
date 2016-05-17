@@ -10,15 +10,14 @@ require('codemirror/mode/markdown/markdown');
 
 
 var Mrkdwn = React.createClass({
-	componentDidMount: function(){
+	componentDidMount: function() {
 		this.setState({
 			code: localStorage.getItem("newText")
 		});
 	},
 	getInitialState: function() {
-
 		return {
-			code: " "
+			code: ""
 		};
 	},
 	
