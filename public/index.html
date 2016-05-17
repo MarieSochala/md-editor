@@ -5,14 +5,26 @@
 	<title>My Markdown Editor</title>
 	<link rel="stylesheet" href="lib/codemirror.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 	
 </head>
 <body>
+	<form>
+		<input/>
+	</form>
 	<h1>My Markdown Editor</h1>
 	<div id="container">
-	<div id="editor"></div>
-	<div id="reponseHtml"></div>
+		<div id="editor"></div>
+		<div id="reponseHtml"></div>
+		<div id="listedocs">
+			<h4>Mes documents</h2>
+		</div>
+	</div>
+	<div id="boutons">
+		<a class="waves-effect waves-light btn"><i class="material-icons right">done</i>Sauvegarder</a>
+		<a class="waves-effect waves-light btn"><i class="material-icons right">mode_edit</i>Nouveau document</a>
 	</div>
 	
 
@@ -20,6 +32,7 @@
 	<script src="lib/codemirror.js"></script>
 	<script src="../node_modules/marked/marked.min.js"></script>
 	<script src="mode/javascript/javascript.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 	<script src="mode/markdown/markdown.js"></script>
 	<script src="mode/xml/xml.js"></script>
 	<script src="js/bundle.js"></script>
