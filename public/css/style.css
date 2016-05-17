@@ -4,10 +4,19 @@ body {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif; }
 
-h1 {
-  text-align: center; }
+.input-field label {
+  color: black; }
+
+nav {
+  width: 50%;
+  margin: auto;
+  background-color: #534847; }
+  nav .input-field {
+    margin-top: 3em;
+    width: 100%; }
 
 #container {
+  margin-top: 3em;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -15,15 +24,28 @@ h1 {
   -ms-flex-pack: center;
   justify-content: center; }
   #container #editor {
-    height: 300px;
-    width: 600px;
+    height: 100%;
+    width: 33%;
     overflow: auto; }
   #container #reponseHtml {
     margin-left: 10px;
     height: 300px;
-    width: 600px;
+    width: 33%;
     background-color: #dadbdb;
     padding: 0 15px;
     overflow: auto; }
+  #container #listedocs {
+    background-color: #88dba3;
+    width: 33%;
+    margin-left: 10px; }
+    #container #listedocs h5 {
+      text-align: center; }
+
+#boutons {
+  text-align: center;
+  margin-top: 3em; }
+  #boutons .waves-effect {
+    background-color: #534847;
+    margin-left: 1em; }
 
 /*# sourceMappingURL=style.css.map */
