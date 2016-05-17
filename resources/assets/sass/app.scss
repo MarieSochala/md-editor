@@ -1,6 +1,6 @@
 body {
-	background-color:teal;
-	color:white;
+	background-color:#3ac569;
+	color:#534847;
 	box-sizing:border-box;
 	font-family: 'Lato', sans-serif;
 }
@@ -15,14 +15,14 @@ h1{
 	#editor{
 		height: 300px;
 		width:600px;
+		overflow: auto;
 	}
 	#reponseHtml{
 		margin-left:10px;
 		height: 300px;
 		width:600px;
-		background-color:grey;	
-		color:blue;
-		border-left: solid 1px #e6e6e6;
+		background-color:#dadbdb;
 		padding:0 15px;
+		overflow: auto;
 	}
 }
