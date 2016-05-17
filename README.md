@@ -33,6 +33,7 @@ N'hésitez pas également à améliorer ce document via un pull request et à po
 * [ ]  organisation du trello
 
  Etapes d'installation : 
+ * branch gh-pages
  * npm install
  * gulp watch
 
