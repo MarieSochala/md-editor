@@ -41782,33 +41782,52 @@ var Mrkdwn = React.createClass({
 		};
 	},
 
-	//modif
 	updateCode: function updateCode(newCode) {
-		//modification de l'état
 		this.setState({
 			code: newCode
 		});
-		// modif du markdown en html dans la div hello
+
 		var textupdate = marked(newCode);
 		$('#reponseHtml').html(textupdate);
-		// localStorage mis en place pour récupérer les donnees tapees
 		localStorage.setItem("newText", newCode);
 	},
 
 	render: function render() {
-		//options codemirror en markdown
 		var myCodeMirrorEditor = {
 			lineNumbers: true,
 			highlightFormatting: true,
 			matchBrackets: true,
 			mode: "markdown"
 		};
-		//value > String the markdown /fonction onChange appelée quand un changement est fait /options passées à CodeMirror
 		return React.createElement(Codemirror, { value: this.state.code, onChange: this.updateCode, options: myCodeMirrorEditor });
 	}
 });
 
-ReactDOM.render(React.createElement(Mrkdwn, null), document.getElementById('editor'));
+var Menu = React.createClass({
+	displayName: 'Menu',
+
+	render: function render() {
+		return React.createElement('nav', null, React.createElement('button', { onClick: this.props.onTroll }, 'Yo'));
+	}
+
+});
+var Wrapper = React.createClass({
+	displayName: 'Wrapper',
+
+	doubletroll: function doubletroll() {
+		alert('troooll');
+	},
+	render: function render() {
+		return React.createElement('div', null, React.createElement(Menu, { onTroll: this.doubletroll }), React.createElement(Mrkdwn, null));
+	}
+
+});
+
+//$('#efface').on('click', function() {
+// 	location.reload();
+// });
+
+ReactDOM.render(React.createElement(Wrapper, null), document.getElementById('editor'));
 
 },{"codemirror/mode/javascript/javascript":3,"codemirror/mode/markdown/markdown":4,"codemirror/mode/xml/xml":6,"jquery":34,"marked":36,"react":168,"react-codemirror":38,"react-dom":39}]},{},[169]);
 

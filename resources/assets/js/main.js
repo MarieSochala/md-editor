@@ -21,35 +21,60 @@ var Mrkdwn = React.createClass({
 		};
 	},
 	
-	//modif
 	updateCode: function(newCode) {
-		//modification de l'état
 		this.setState({
 			code: newCode
 		});
-		// modif du markdown en html dans la div hello
+		
 	var textupdate = marked(newCode);
 	$('#reponseHtml').html(textupdate);
-	// localStorage mis en place pour récupérer les donnees tapees
 	localStorage.setItem("newText", newCode);
 	},
 
 	render: function() {
-		//options codemirror en markdown
 		var myCodeMirrorEditor = {
 		lineNumbers: true,
 		highlightFormatting: true,
 		matchBrackets: true,
 		mode:  "markdown"
 	};
-	//value > String the markdown /fonction onChange appelée quand un changement est fait /options passées à CodeMirror 
 		return <Codemirror value={this.state.code} onChange={this.updateCode} options={myCodeMirrorEditor} />
 	}
 });
 
 
+var Menu = React.createClass({
+
+ render: function() {
+ 	return (
+ 		<nav><button onClick={this.props.onTroll}>Yo</button></nav>
+ 		);
+ }
+
+
+});
+var Wrapper = React.createClass({
+	doubletroll: function(){
+alert('troooll');
+	},
+ render: function() {
+ 	return (
+ 		<div>
+ 		<Menu onTroll={this.doubletroll} />
+ 		<Mrkdwn />
+ 		</div>
+ 		);
+ }
+
+});
+
+
+//$('#efface').on('click', function() {
+// 	location.reload();
+// });
+
 ReactDOM.render(
-  <Mrkdwn />,
+  <Wrapper />,
   document.getElementById('editor')
 );
 	
