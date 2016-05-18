@@ -11,9 +11,14 @@ require('codemirror/mode/markdown/markdown');
 
 var Mrkdwn = React.createClass({
 	componentDidMount: function() {
-		this.setState({
+		this.setState({		
 			code: localStorage.getItem("newText")
 		});
+		console.log(this);
+		setTimeout(()=>{
+			debugger;
+			},3000)
+		
 	},
 	getInitialState: function() {
 		return {
@@ -38,40 +43,77 @@ var Mrkdwn = React.createClass({
 		matchBrackets: true,
 		mode:  "markdown"
 	};
-		return <Codemirror value={this.state.code} onChange={this.updateCode} options={myCodeMirrorEditor} />
+		return <Codemirror ref={(ref)=>{this.editor=ref}} value={this.state.code} onChange={this.updateCode} options={myCodeMirrorEditor} />
 	}
 });
 
 
-var Menu = React.createClass({
-
- render: function() {
- 	return (
- 		<nav><button onClick={this.props.onTroll}>Yo</button></nav>
- 		);
- }
-
-
+var Nouveaudoc = React.createClass({
+   render: function() {
+       return (
+           <div>
+               <a className="waves-effect waves-light btn grey" onClick={this.props.deltext}>
+               <i className="material-icons right">mode_edit</i>Nouveau document</a>
+           </div>
+       );
+   }
 });
+
+var Sauvegarder = React.createClass({
+   render: function() {
+       return (
+           <div>
+               <a className="waves-effect waves-light btn grey" onClick={this.props.deltext}>
+               <i className="material-icons right">done</i>Sauvegarder</a>
+           </div>
+       );
+   }
+});
+
+var Telecharger = React.createClass({
+   render: function() {
+       return (
+           <div>
+               <a className="waves-effect waves-light btn grey" onClick={this.props.deltext}>
+               <i className="material-icons right">play_for_work</i>Télécharger</a>
+           </div>
+       );
+   }
+});
+
+
 var Wrapper = React.createClass({
-	doubletroll: function(){
-alert('troooll');
+	getInitialState: function() {
+		console.log("getInitialState");
+return{
+	code:""
+};
 	},
- render: function() {
+	dbletroll: function() {
+		console.log("dbletroll");
+		this.setState({
+			code: localStorage.clear()
+	});
+		$
+		
+return 
+	<Mrkdwn value={this.state.code} />
+
+	},
+
+
+ 	render: function() {
  	return (
  		<div>
- 		<Menu onTroll={this.doubletroll} />
  		<Mrkdwn />
+ 		<Nouveaudoc deltext={this.dbletroll} />
+ 		<Telecharger deltext={this.dbletroll} />
+ 		<Sauvegarder deltext={this.dbletroll} />
  		</div>
  		);
- }
-
+ 	}
 });
 
-
-//$('#efface').on('click', function() {
-// 	location.reload();
-// });
 
 ReactDOM.render(
   <Wrapper />,

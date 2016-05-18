@@ -41775,6 +41775,10 @@ var Mrkdwn = React.createClass({
 		this.setState({
 			code: localStorage.getItem("newText")
 		});
+		console.log(this);
+		setTimeout(function () {
+			debugger;
+		}, 3000);
 	},
 	getInitialState: function getInitialState() {
 		return {
@@ -41793,39 +41797,68 @@ var Mrkdwn = React.createClass({
 	},
 
 	render: function render() {
+		var _this = this;
+
 		var myCodeMirrorEditor = {
 			lineNumbers: true,
 			highlightFormatting: true,
 			matchBrackets: true,
 			mode: "markdown"
 		};
-		return React.createElement(Codemirror, { value: this.state.code, onChange: this.updateCode, options: myCodeMirrorEditor });
+		return React.createElement(Codemirror, { ref: function ref(_ref) {
+				_this.editor = _ref;
+			}, value: this.state.code, onChange: this.updateCode, options: myCodeMirrorEditor });
 	}
 });
 
-var Menu = React.createClass({
-	displayName: 'Menu',
+var Nouveaudoc = React.createClass({
+	displayName: 'Nouveaudoc',
 
 	render: function render() {
-		return React.createElement('nav', null, React.createElement('button', { onClick: this.props.onTroll }, 'Yo'));
+		return React.createElement('div', null, React.createElement('a', { className: 'waves-effect waves-light btn grey', onClick: this.props.deltext }, React.createElement('i', { className: 'material-icons right' }, 'mode_edit'), 'Nouveau document'));
 	}
-
 });
+
+var Sauvegarder = React.createClass({
+	displayName: 'Sauvegarder',
+
+	render: function render() {
+		return React.createElement('div', null, React.createElement('a', { className: 'waves-effect waves-light btn grey', onClick: this.props.deltext }, React.createElement('i', { className: 'material-icons right' }, 'done'), 'Sauvegarder'));
+	}
+});
+
+var Telecharger = React.createClass({
+	displayName: 'Telecharger',
+
+	render: function render() {
+		return React.createElement('div', null, React.createElement('a', { className: 'waves-effect waves-light btn grey', onClick: this.props.deltext }, React.createElement('i', { className: 'material-icons right' }, 'play_for_work'), 'Télécharger'));
+	}
+});
+
 var Wrapper = React.createClass({
 	displayName: 'Wrapper',
 
-	doubletroll: function doubletroll() {
-		alert('troooll');
+	getInitialState: function getInitialState() {
+		console.log("getInitialState");
+		return {
+			code: ""
+		};
 	},
+	dbletroll: function dbletroll() {
+		console.log("dbletroll");
+		this.setState({
+			code: localStorage.clear()
+		});
+		$;
+
+		return;
+		React.createElement(Mrkdwn, { value: this.state.code });
+	},
+
 	render: function render() {
-		return React.createElement('div', null, React.createElement(Menu, { onTroll: this.doubletroll }), React.createElement(Mrkdwn, null));
+		return React.createElement('div', null, React.createElement(Mrkdwn, null), React.createElement(Nouveaudoc, { deltext: this.dbletroll }), React.createElement(Telecharger, { deltext: this.dbletroll }), React.createElement(Sauvegarder, { deltext: this.dbletroll }));
 	}
-
 });
-
-//$('#efface').on('click', function() {
-// 	location.reload();
-// });
 
 ReactDOM.render(React.createElement(Wrapper, null), document.getElementById('editor'));
 
